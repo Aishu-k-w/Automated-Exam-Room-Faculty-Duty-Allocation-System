@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Exam Room & Faculty Duty Allocation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.png" type="image/png">
+    <meta name="description" content="Automated Exam Room & Faculty Duty Allocation System">
+    <meta name="theme-color" content="#2958f3">
+</head>
+<body class="landing-bg">
+    <div class="dynamic-bg"></div>
+    <div class="landing-content">
+        <img src="logo.png" alt="Institution Logo" class="logo"/>
+        <h1>Automated Exam Room & Faculty Duty Allocation System</h1>
+        <p>Streamline your exam room and faculty invigilation assignments in just a few clicks.</p>
+        <div style="max-width: 400px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px;">
+            <button id="start-phase1" class="button">Student Classroom Allocation</button>
+            <button id="start-phase2" class="button">Faculty Exam Duty Allocation</button>
+        </div>
+        <div style="margin-top: 40px; text-align: center; max-width: 600px; margin-left: auto; margin-right: auto;">
+            <h2>How it works</h2>
+            <p>1. Upload your classroom Excel file and specify the number of students and starting USN.</p>
+            <p>2. Our system automatically allocates students to classrooms.</p>
+            <p>3. Proceed to faculty allocation to assign invigilators.</p>
+        </div>
+    </div>
+    <script>
+        document.getElementById('start-phase1').onclick = function() {
+            window.location.href = 'phase1.html';
+        };
+        document.getElementById('start-phase2').onclick = function() {
+            window.location.href = 'phase2.html';
+        };
+    </script>
+</body>
+</html> 

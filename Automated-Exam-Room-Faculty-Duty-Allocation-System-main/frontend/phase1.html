@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Classroom Allocation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.png" type="image/png">
+    <meta name="description" content="Student Classroom Allocation">
+    <meta name="theme-color" content="#2958f3">
+</head>
+<body>
+    <div class="landing-container">
+        <img src="logo.png" alt="Institution Logo" class="logo"/>
+        <h1>Student Classroom Allocation</h1>
+        <div id="banner"></div>
+        <form id="phase1-form" enctype="multipart/form-data">
+            <label>Number of Students:
+                <input type="number" name="num_students" required>
+            </label>
+            <label>Starting USN:
+                <input type="text" name="start_usn" required>
+            </label>
+            <label>Classroom Excel:
+                <input type="file" name="classroom_file" accept=".xlsx" required>
+                <span title="Upload an Excel file with columns Classroom and Capacity">&#9432;</span>
+            </label>
+            <button type="submit" id="submit-btn">Allocate Classrooms</button>
+            <span id="spinner" class="spinner" style="display:none;"></span>
+        </form>
+        <a id="download-phase1" href="#" style="display:none;">Download Excel File</a>
+        <br>
+        <button id="to-phase2" class="button">Proceed to Faculty Allocation</button>
+        <button id="to-home" class="button" style="margin-top: 10px;">Back to Home</button>
+        <div id="summary-banner" style="display:none; margin-top: 20px; padding: 10px; background: #eaf3fb; border-radius: 8px; text-align: center;">
+            <p>Allocation completed successfully! <span id="summary-text"></span></p>
+        </div>
+    </div>
+    <script src="phase1.js"></script>
+    <script>
+        document.getElementById('to-home').onclick = function() {
+            window.location.href = 'index.html';
+        };
+    </script>
+</body>
+</html> 

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Duty Allocation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.png" type="image/png">
+    <meta name="description" content="Faculty Duty Allocation">
+    <meta name="theme-color" content="#2958f3">
+</head>
+<body>
+    <div class="landing-container">
+        <img src="logo.png" alt="Institution Logo" class="logo"/>
+        <h1>Faculty Duty Allocation</h1>
+        <div id="banner"></div>
+        <form id="phase2-form" enctype="multipart/form-data">
+            <label>Exam Timetable Excel:
+                <input type="file" name="exam_timetable_file" accept=".xlsx" required>
+                <span title="Upload an Excel file with columns Date, Day, Time, Subject code, Subject">&#9432;</span>
+            </label>
+            <label>Faculty Timetable Excel:
+                <input type="file" name="faculty_timetable_file" accept=".xlsx" required>
+                <span title="Upload an Excel file with columns Day, Time, Subject, Faculty">&#9432;</span>
+            </label>
+            <button type="submit" id="submit-btn">Allocate Faculty</button>
+            <span id="spinner" class="spinner" style="display:none;"></span>
+        </form>
+        <a id="download-phase2" href="#" style="display:none;">Download Excel File</a>
+        <br>
+        <button id="to-phase1" class="button">Back to Classroom Allocation</button>
+        <button id="to-home" class="button" style="margin-top: 10px;">Back to Home</button>
+        <div id="summary-banner" style="display:none; margin-top: 20px; padding: 10px; background: #eaf3fb; border-radius: 8px; text-align: center;">
+            <p>Faculty allocation completed! <span id="summary-text"></span></p>
+        </div>
+    </div>
+    <script src="phase2.js"></script>
+    <script>
+        document.getElementById('to-home').onclick = function() {
+            window.location.href = 'index.html';
+        };
+    </script>
+</body>
+</html> 
